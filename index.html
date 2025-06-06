@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marxia - Product Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Marxia - Configure Your Product</h1>
+    </header>
+
+    <main>
+        <section id="product-image-section">
+            <h2>Product Image</h2>
+            <div id="image-placeholder">
+                <!-- Placeholder for actual image element -->
+                <p>[Product Image Here]</p>
+            </div>
+        </section>
+
+        <section id="product-details-section">
+            <h2>Product Details</h2>
+            <form id="product-form">
+                <div>
+                    <label for="product-name">Product Name:</label>
+                    <input type="text" id="product-name" name="product-name" required>
+                </div>
+                <div>
+                    <label for="asset-id">Asset Name ID:</label>
+                    <input type="text" id="asset-id" name="asset-id" required>
+                </div>
+                <div>
+                    <label for="product-price">Product Price Cost:</label>
+                    <input type="number" id="product-price" name="product-price" value="10.00" step="0.01" min="0" required>
+                    <!-- SMB might set this, or it could be dynamic -->
+                </div>
+
+                <div id="quantity-control">
+                    <h3>Quantity</h3>
+                    <button type="button" id="remove-item">-</button>
+                    <span id="quantity-display">1</span>
+                    <button type="button" id="add-item">+</button>
+                </div>
+
+                <div>
+                    <label for="subtotal">Subtotal:</label>
+                    <span id="subtotal-display">$10.00</span>
+                </div>
+
+                <div>
+                    <label for="product-description">Description:</label>
+                    <textarea id="product-description" name="product-description" rows="4" cols="50"></textarea>
+                </div>
+
+                <button type="submit" id="add-to-cart-btn">Add to Cart</button>
+            </form>
+        </section>
+
+        <section id="items-to-purchase-section">
+            <h2>List of Items to Purchase</h2>
+            <ul id="items-list">
+                <!-- Items will be dynamically added here by JS if needed,
+                     but for this page, it's primarily about configuring one product -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Marxia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
