@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marxia - Shopping Cart</title>
+    <link rel="stylesheet" href="style.css"> <!-- Shared stylesheet -->
+</head>
+<body>
+    <header>
+        <h1>Marxia - Your Shopping Cart</h1>
+    </header>
+
+    <main>
+        <section id="cart-items-section">
+            <h2>Cart Items</h2>
+            <div id="cart-items-container">
+                <!-- Cart items will be dynamically loaded here by cart.js -->
+                <p id="empty-cart-message">Your cart is currently empty.</p>
+            </div>
+        </section>
+
+        <section id="summary-section">
+            <h2>Order Summary</h2>
+            <div>
+                <label for="total-amount">Total Amount:</label>
+                <span id="total-amount-display">$0.00</span>
+            </div>
+            <div>
+                <label for="vat-percentage">VAT (%):</label>
+                <input type="number" id="vat-percentage" name="vat-percentage" min="0" step="0.1" placeholder="e.g., 20">
+            </div>
+            <button type="button" id="calculate-vat-btn">Calculate Total with VAT</button>
+            <div>
+                <label for="final-total">Final Total (inc. VAT):</label>
+                <span id="final-total-display">$0.00</span>
+            </div>
+            <button type="button" id="proceed-to-checkout-btn">Proceed to Checkout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Marxia</p>
+        <p><a href="index.html">Back to Product Page</a></p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
